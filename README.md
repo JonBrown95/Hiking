@@ -13,3 +13,5 @@
     npx expo start
 
 then scan qr code or whatever
+
+`szymon@test.com:12345678` is a valid login
