@@ -1,5 +1,7 @@
 // Import the functions you need from the SDKs you need
-
+import { initializeApp } from 'firebase/app'
+import { getAuth } from 'firebase/auth'
+import { getFirestore } from 'firebase/firestore'
 import * as firebase from "firebase/compat";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -7,12 +9,12 @@ import * as firebase from "firebase/compat";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA9WSh6d-9HbuiBGN6jMYCTJcacOjdqc2Q",
-  authDomain: "fir-test-57976.firebaseapp.com",
-  projectId: "fir-test-57976",
-  storageBucket: "fir-test-57976.appspot.com",
-  messagingSenderId: "300035690959",
-  appId: "1:300035690959:web:097cbba0a5f9de57f502ba"
+  apiKey: "AIzaSyAOh96t6mSqP668BLHGmr3V04Zm1a5MK5E",
+  authDomain: "add-friends-test.firebaseapp.com",
+  projectId: "add-friends-test",
+  storageBucket: "add-friends-test.appspot.com",
+  messagingSenderId: "710833994836",
+  appId: "1:710833994836:web:9bb2e5b0692801aea3c1c1"
 };
 
 // Initialize Firebase
@@ -26,3 +28,6 @@ if (!firebase.apps.length) {
 const auth = firebase.auth();
 
 export { auth };
+
+
+export const db = getFirestore(app)

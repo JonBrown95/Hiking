@@ -5,7 +5,7 @@ import { auth } from '../firebase';
 
 
 
-const HomeScreen = () => {
+const ProfileScreen = () => {
   const navigation = useNavigation();
 
   const handleSignout = () => {
@@ -20,6 +20,7 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <Text>Signed in as: {auth.currentUser?.email},</Text>
+      <Text>Bio: {auth.currentUser?.bio}</Text>
       <TouchableOpacity onPress={handleSignout} style={styles.button}>
         <Text style={styles.buttonText}>Sign out</Text>
       </TouchableOpacity>
@@ -48,4 +49,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default ProfileScreen;
